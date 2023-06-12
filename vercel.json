@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "name": "rsnApi",
+    "builds": [
+      { "src": "./index.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      {
+      "src":"/(.*)",
+        "dest":"/"
+      }]
+  }
