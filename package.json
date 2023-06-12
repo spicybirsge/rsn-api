@@ -1,0 +1,27 @@
+{
+  "name": "rsn-api",
+  "version": "1.0.0",
+  "description": "Api for the website https://rsngaming.tk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spicybirsge/rsn-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spicybirsge/rsn-api/issues"
+  },
+  "homepage": "https://github.com/spicybirsge/rsn-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.11"
+  }
+}
