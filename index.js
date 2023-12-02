@@ -16,14 +16,18 @@ app.get('/api/v1/latest_video', authorizer, async(req, res) => {
 
    
 
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channel_id}&maxResults=1&order=date&type=video&key=${process.env.GOOGLE_API_KEY}`;
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channel_id}&maxResults=3&order=date&type=video&key=${process.env.GOOGLE_API_KEY}`;
 
     const r = await fetch(url, {
         method: 'GET'
     })
 
     const data = await r.json()
-    return res.json({last_video_id: data.items[0].id.videoId})
+    const videoids = []
+    for(const v of data.items) {
+        videoids.push(v.id.videoId)
+    }
+    return res.json({last_video_id: data.items[0].id.videoId, last_3: videoids})
 
 })
 
